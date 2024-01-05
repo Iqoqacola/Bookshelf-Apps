@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Bookshelf Apps</h1>
+  </header>
+
+  <main>
+    <section class="rak masukkan-buku-baru">
+      <form id="newBook">
+        <h2>Masukkan Buku Baru</h2>
+
+        <div class="Input">
+          <label for="bookTitle">Judul</label>
+          <input type="text" id="bookTitle" required>
+        </div>
+
+        <div class="Input">
+          <label for="bookAuthor">Penulis</label>
+          <input type="text" id="bookAuthor" required>
+        </div>
+
+        <div class="Input">
+          <label for="bookYear">Tahun</label>
+          <input type="number" id="bookYear" required>
+        </div>
+
+        <div class="checkbox">
+          <label class="checkbox" for="bookComplete">Selesai dibaca</label>
+          <input id="bookComplete" type="checkbox">
+        </div>
+
+        <button id="bookSubmit" type="submit">Masukkan buku ke rak</button>
+
+      </form>
+    </section>
+
+    <section class="rak rak-book">
+
+      <h2>Belum Selesai dibaca</h2>
+
+      <div class="container-book" id="unCompleted">
+
+        <!-- <div class="book">
+          <article>
+            <h3>Atomic Habits</h3>
+            <p>James Clear</p>
+            <p>2018</p>
+          </article>
+          <div>
+            <button class="green" type="submit">Completed </button>
+            <button class="red" type="submit">Delete</button>
+          </div>
+        </div> -->
+
+      </div>
+
+    </section>
+
+    <section class="rak rak-book">
+
+      <h2>Selesai dibaca</h2>
+
+      <div class="container-book" id="Completed">
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
