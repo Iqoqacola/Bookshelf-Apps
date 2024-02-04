@@ -1,47 +1,3 @@
-// // Fungsi untuk menambahkan data buku
-// function addBook(book) {
-//   // Mendapatkan id buku yang unik
-//   const id = new Date().getTime();
-
-//   // Menyimpan data buku ke dalam localStorage
-//   localStorage.setItem(id, JSON.stringify(book));
-// }
-
-// // Fungsi untuk mengambil data buku yang belum selesai dibaca
-// function getUnreadBooks() {
-//   return localStorage.getItems().filter((item) => JSON.parse(item.value).isComplete === false);
-// }
-
-// // Fungsi untuk mengambil data buku yang sudah selesai dibaca
-// function getFinishedBooks() {
-//   return localStorage.getItems().filter((item) => JSON.parse(item.value).isComplete === true);
-// }
-
-// // Fungsi untuk memindahkan buku ke rak "Belum selesai dibaca"
-// function moveToUnread(book) {
-//   unreadBooks.push(book);
-//   finishedBooks.splice(finishedBooks.indexOf(book), 1);
-// }
-
-// // Fungsi untuk memindahkan buku ke rak "Selesai dibaca"
-// function moveToFinished(book) {
-//   finishedBooks.push(book);
-//   unreadBooks.splice(unreadBooks.indexOf(book), 1);
-// }
-
-// // Fungsi untuk menghapus data buku
-// function removeBook(book) {
-//   localStorage.removeItem(book.id);
-// }
-
-// // Inisialisasi variabel
-// const unreadBooks = getUnreadBooks();
-// const finishedBooks = getFinishedBooks();
-
-// // Event listener untuk tombol "Tambah"
-// // document.
-
-
 const book = [];
 const RENDER_EVENT = 'render-book'
 
@@ -78,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const addBook = () => {
   const title = document.getElementById('bookTitle').value;
   const author = document.getElementById('bookAuthor').value;
-  const year = document.getElementById('bookYear').value;
+  const year = parseInt(document.getElementById('bookYear').value);
   const cekbox = document.getElementById('bookComplete').checked;
 
 
